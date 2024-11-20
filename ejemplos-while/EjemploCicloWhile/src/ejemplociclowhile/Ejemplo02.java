@@ -17,14 +17,17 @@ public class Ejemplo02 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
-        entrada.useLocale(Locale.US);
+        entrada.useLocale(Locale.US); /* Se utliza para que los valores 
+                                      decimales acepten el uso del punto.*/
         int limite;
         int contador = 1;
         System.out.println("Ingrese el Límite");
         limite = entrada.nextInt(); 
         while (contador <= limite){
             
-            if (contador%2==0) {
+            if (contador%2<=0) { /* Sirve para declarar una condicion 
+                                 e ir comprobando si los valores son impares, 
+                                 si se da el cso se continua con el proceso*/
                 System.out.printf("Contador %d\n", 
                     contador);
             }

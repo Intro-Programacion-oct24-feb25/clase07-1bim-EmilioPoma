@@ -63,7 +63,9 @@ public class Ejemplo102 {
         
         String cadena = ""; // cadena acumulador
         String suma = "";
+        suma = String.format("Tabla de sumar\n", suma);
         String resta = "";
+        String multiplicacion = "";
         
         
         while (contador <= limite_tabla){
@@ -80,9 +82,16 @@ public class Ejemplo102 {
                     tabla, 
                     contador,
                     operacion);
+            
+            operacion = tabla * contador;
+            multiplicacion = String.format("%s%d*%d=%d\n", 
+                    cadena, 
+                    tabla, 
+                    contador,
+                    operacion);
             contador = contador + 1;
         }
-        cadena = String.format("Tabla de sumar\n%s\nTabla de resta\n%s", suma, resta);
+        cadena = String.format(suma, resta);
         System.out.printf("%s\n", cadena);
         
     }
